@@ -1,0 +1,72 @@
+$huge: 10000px;
+$desktop: 1280px;
+$tablet: 1024px;  //dark green
+$phablet: 767px;  //hot pink
+$phone: 360px;    //light blue
+$tiny: 330px;
+
+.bar {
+  display: flex;
+  flex-row: row wrap;
+  margin-top: 0rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  @media (max-width: $phone) {
+	  margin-left: 0.5rem;
+	  margin-right: 0.5rem;
+	}
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: tomato;
+  font-size: 1.4rem;
+  font-weight: bold;
+  justify-content: flex-end;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.empty {
+	justify-content: flex-start;
+}
+
+.messageSuccess {
+    display: flex;
+    flex-direction: row;
+    flex: 1 100%;
+    justify-content: space-between;
+    height: 3.0rem;
+    line-height: 3.2rem;  
+    color: limegreen;
+    background-color: #dff0d8;
+    margin: 0.0rem;
+    font-weight: bold;
+    font-family: 'Josefin Slab';
+    font-size: 1.6rem;
+    border-radius: 6px;
+    text-align: center;
+    @media (max-width: $tablet) {
+		  font-size: 1.4rem;
+		  height: 4.0rem;
+		  line-height: 1.4rem;
+		  padding-top: 0.8rem;
+		} 
+    @media (max-width: $phablet) {
+		  font-size: 1.2rem;
+		}  
+    @media (max-width: $phone) {
+		  font-size: 1.0rem;
+		}
+}
+
+.messageError {
+	@extend .messageSuccess;
+    color: #b94a48;
+    background-color: #f2dede;
+}
+
+

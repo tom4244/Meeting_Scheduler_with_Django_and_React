@@ -1,0 +1,606 @@
+$huge: 10000px;
+$desktop: 1280px;
+$tablet: 1024px;  //dark green
+$phablet: 767px;  //hot pink
+$phone: 360px;    //light blue
+$tiny: 330px;
+
+  
+.browseInput {
+	@extend input;
+	display: none;
+	margin-bottom: 1rem;
+}
+
+.browseInputLabel {
+  for: "file-upload";
+  display: flex;
+  border: 0px solid black;
+  background: DodgerBlue;
+  color: white;
+  font-family: "Quicksand";
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 8rem;
+	margin-top: 10px;
+  @media (max-width: $phone) {
+	  font-size: 14px;
+	  height: 20px;
+	}
+  padding: 8px;
+  &:hover {
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+  }
+}
+
+.centeredText {
+	font-size: 1.6rem;
+  font-family: 'Josefin Slab';
+  font-weight: regular;
+  color: blue;
+}
+
+.centeredTextGreen {
+	@extend .centeredText;
+	color: green;
+}
+
+.checkboxGroup {
+  color: #ffffff;
+  width: 160px;
+  font-family: "Josefin Slab";
+  font-size: 16px;
+  font-weight: bold;
+  background-color: DodgerBlue;
+  border: 0px solid black;
+  border-radius: 1px;
+  cursor: pointer;
+  text-declaration: none;
+}
+
+.classList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  @media (max-width: $phone) {
+		font-size: 0.8rem;
+	}
+}
+
+.colon {
+  display: flex;
+  text-align: center;
+  font-family: Josefin Slab;
+  font-weight: bold;
+  font-size: 40px;
+  padding-top: 15px;
+	margin-left: 4px;
+  margin-right: 4px;
+  color: DodgerBlue;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 8px;
+  padding: 5px;
+}
+
+formRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColumnRt {
+	@extend .flexColumn;
+	align-items: flex-end;
+	width: 50px;
+}
+
+.flexColumn20 {
+	@extend .flexColumn;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-right: 10px;
+  flex-wrap: wrap;
+}
+
+.flexRow80 {
+	@extend .flexRow;
+	flex-basis: 80%;
+}
+
+.goToRoomDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100rem;
+}
+
+h2 {
+  font-family: "Quicksand";
+  color: blue;
+	margin-bottom: 0px;
+}
+
+.h2mt0 {
+	@expand h2;
+	margin-top: 0px;
+}
+
+h3 {
+  font-family: "Quicksand";
+  color: blue;
+	margin-top: 4px;
+}
+
+home {
+	background-color: aliceblue;
+}
+    
+.photoImg {
+	height: 200px;
+}
+    
+input {
+	background: white;
+	color: DodgerBlue;
+
+  height: 1.4rem;
+  width: 120px;
+	font-size: 18px;
+}
+
+.inputBlue {
+  color: white;
+	background: DodgerBlue;
+	cursor: pointer;
+	font-size: 18px;
+  padding: 4px;
+	&:hover {
+	  color: DodgerBlue;
+		background: white;
+	}
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: row;
+	flex-wrap: wrap;
+  @media (max-width: $phone) {
+	  flex-direction: column;
+	}
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.inputColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  width:132px;
+  font-family: Josefin Slab;
+  font-size: 22px;
+  margin-bottom: 0.0rem;
+  color: blue;
+}
+
+.ampm {
+  font-family: Josefin Slab;
+  font-size: 14px;
+  color: blue;
+  text-align: left;
+  margin-left: 13px;
+}
+
+.labelCenter {
+	@extend label;
+	align-self: center;
+}
+
+.label2 {
+	@extend label;
+  width: 84px;
+  margin-right: 0px;
+}
+
+.labelLeft {
+	@extend label;
+	width: 84px;
+	align-items: flex-start;
+}
+
+.label4 {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+}
+
+.label5 {
+	@extend label;
+	font-size: 24px;
+}
+
+.label6 {
+	@extend label;
+  text-align: left;
+	margin-left: 26px;
+}
+
+.label7 {
+  @extend label;
+  font-size: 20px;
+	margin-left: 40px;
+}
+
+.label8 {
+	@extend label;
+  width: 84px;
+	margin-left: 20px;
+  margin-right: 0px;
+}
+
+.label9 {
+  @extend label;
+  width: 48px;
+	margin-left: 10px;
+  margin-right: 0px;
+	align-items: flex-end;
+	font-size: 16px;
+}
+
+.label10 {
+	@extend label;
+  padding-top: 10px;
+	text-align: left;
+}
+
+.label11 {
+	@extend label;
+	margin-left: 8px;
+}
+
+.label12 {
+	@extend label;
+	font-size: 24px;
+	margin-right: 10px;
+}
+
+.label200 {
+	@extend label;
+	width: 200px;
+	margin-bottom: 6px;
+}
+
+.label260 {
+	@extend label;
+  width: 260px;
+}
+
+.mtgTypesTextArea {
+	@extend textarea;
+  display: flex;
+  height: 26px;
+  width: 400px;
+  marginRight: 10px;
+  font-family: Josefin Slab;
+  font-size: 22px;
+  @media (max-width: 500px) {
+	  width: 300px;
+		font-size: 16px;
+	}
+}
+
+.nameLabel {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+	color: darkblue;
+  font-family: Quicksand;
+  width: 200px;
+  margin-top: 5px;
+}
+
+p { 
+	font-family: 'Quicksand';
+	font-size: 1.6rem;
+	margin-bottom: 0px;
+	color: blue;
+} 
+
+.p2 { 
+  font-family: Josefin Slab;
+  font-size: 24px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	color: blue;
+} 
+
+.p3 {
+	@extend p;
+  font-size: 16px;
+}
+
+.p3Red {
+	@extend .p3;
+	color: red;
+}
+
+.p3mt0 {
+	@extend .p3;
+	margin-top: 0px;
+}
+
+.p4 {
+  @extend p;
+  margin-bottom: 10px;
+}
+
+.p5 {
+  @extend .p2;
+  margin: 0px;
+  padding: 0px;
+}
+
+.p6 {
+	@extend p;
+	font-size: 16px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.pMarginTop {
+	@extend p;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.pOrange {
+	@extend p;
+	flex-basis: 70%;
+	color: orange;
+}
+
+.buttonRounded {
+    width: 8rem;
+    height: 3em;
+    margin: 0.0rem;
+    padding: 4px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    background-color: DodgerBlue;
+    border: 0px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+          background-color: white;
+          color: DodgerBlue;
+          border: 1px solid green; 
+      }
+    &:disabled { 
+      background-color: #90ff1e;
+      color: white;
+      border: 0px solid black; 
+    }
+}
+
+.buttonRounded40 {
+	@extend .buttonRounded;
+  height: 2.0rem;
+	flex-basis: 40%;
+}
+
+.buttonRounded60 {
+	@extend .buttonRounded;
+  height: 2.0rem;
+	flex-basis: 60%;
+}
+
+.buttonRounded140 {
+	@extend .buttonRounded;
+  height: 45px;
+  width: 140px;
+  marginBottom: 3px;
+  marginLeft: -10;
+  marginRight: 10;
+}
+
+.buttonRounded200 {
+	@extend .buttonRounded;
+	width: 200px;
+}
+
+.buttonRounded240 {
+	@extend .buttonRounded;
+	height: 44px;
+	width: 240px;
+	font-size: 16px;
+}
+
+.buttonRounded2020 {
+	@extend .buttonRounded;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.buttonWhiteboardGreen {
+	@extend .buttonRounded140;
+	color: DodgerBlue;
+	background-color: lime;
+}
+
+option {
+	color: darkblue;
+  font-weight: bold;
+	background-color: white !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+select {
+	color: #ffffff;
+  width: 120px;
+  height: 30px;
+  margin-top: 0px;
+  padding: 4px;
+  font-family: "Josefin Slab";
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  background-color: DodgerBlue;
+  border: 0px solid black;
+  border-radius: 1px;
+  cursor: pointer;
+  text-declaration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &:hover {
+		color: DodgerBlue;
+    background-color: white;
+    border: 1px solid green;
+  }
+}
+
+.select2 {
+	@extend select;
+	width: 80px;
+	margin-top: 0px;
+}
+
+.select3 {
+	@extend select;
+	width: 40px;
+	margin-top: 0px;
+	margin-left: 20px;
+	align-items: right;
+}
+
+.select4 {
+	@extend select;
+	width: 40px;
+	margin-top: 0px;
+}
+
+.selectSmallFont {
+	@extend select;
+	font-size: 16px;
+}
+
+.selectNarrowSmallFont {
+	@extend select;
+	width: 60px;
+	font-size: 16px;
+}
+
+.selectNarrowSmallFont40 {
+	@extend select;
+	width: 60px;
+	margin-left: 16px;
+}
+
+.selectWide {
+	@extend select;
+	width: 200px;
+}
+
+.showPastDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.spanGreen {
+  color: green;
+}
+
+textarea {
+  display: flex;
+  height: 220px;
+  width: 500px;
+  font-size: 20px;
+  @media (max-width: 500px) {
+	  height: 120px;
+		width: 300px;
+		font-size: 12px;
+	}
+}
+
+.tRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: spaced-evenly;
+  line-height: 8px;
+  padding: 5px;
+  color: Green;
+  align-items: center;
+  &:hover {
+    background-color: white;
+  }
+  @media (max-width: $phone) {
+		font-size: 0.8rem;
+	}
+}
+
+.tWord {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 16px;
+  @media (max-width: $phone) {
+		font-size: 12px;
+	}
+}
+
+.userPageStyle {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin-left: 20px;
+}
+
+.vSpace5px {
+	height: 5px;
+}
+
+.vSpace10px {
+  height: 10px;
+}
+
+.vSpace50px {
+  height: 50px;
+}
+

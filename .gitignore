@@ -1,0 +1,15 @@
+node_modules/
+# webpack bundles
+webpack_output/bundle.js
+webpack_output/bundle.js.map
+
+.directory
+.idea/
+meeting/React/.yarn/cache/
+meeting/React/.yarn/install-state.gz
+*.bak
+poetry.lock.backup.*
+pyproject.toml.backup.*
+meeting/scheduler/views.py.backup.*
+meeting/meeting/__pycache__
+

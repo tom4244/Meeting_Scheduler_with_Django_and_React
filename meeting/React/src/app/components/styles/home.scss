@@ -1,0 +1,138 @@
+$WelcomePagePic: "../../img/meeting.jpg";
+$huge: 10000px;
+$desktop: 1280px;
+$tablet: 1024px;  //dark green
+$phablet: 767px;  //hot pink
+$phone: 360px;    //light blue
+$tiny: 330px;
+$AspectRatio: 512.0 / 768.0;
+
+.roundedButton {
+   width: 8rem;
+   height: 3em;
+   margin: 0.0rem;
+   padding: 4px;
+   color: white;
+   font-weight: bold;
+   font-family: 'Quicksand';
+   font-size: 16px;
+   background-color: DodgerBlue;
+   border: 0px solid black;
+   border-radius: 5px;
+   cursor: pointer;
+   & hover:hover {
+         background-color: white;
+         color: green;
+         border: 1px solid green;
+     }
+   &:disabled {
+     background-color: #90ff1e;
+     color: white;
+     border: 0px solid black;
+   }
+}
+
+.home {
+  background-size: cover;
+  background-color: blanchedalmond;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titlesDiv {
+  font-weight: bold;
+  font-size: 2.0rem;
+  color: forestgreen;
+  margin-top: 0rem;
+  margin-bottom: 0.4rem;
+}
+
+.schedulerIntro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @media (max-width: $huge ) {
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	}
+  @media (max-width: $tablet ) {
+	  flex-direction: row;
+	  align-items: flex-start;
+	  flex-wrap: wrap;
+	}
+  @media (max-width: $phablet ) {
+	  margin: 0 auto;
+	  flex-wrap: wrap;
+	}
+}
+
+.meetingImg {
+  display: flex;
+  flex: 0 0 100%;
+  background-image: url($WelcomePagePic);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  justify-content: flex-start;
+  @media (max-width: $huge) {
+	  flex: 0 0 50%;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  width: 50vw;
+	  height: calc(90vw * $AspectRatio);
+	}
+  @media (max-width: $tablet) {
+	  flex: 0 0 100%;
+	  justify-content: flex-start;
+	  height: 317px;
+	  max-height: 317px;
+	  max-width: calc(317px / $AspectRatio);
+	}
+  @media (max-width: $phablet) {
+	  height: calc(90vw * $AspectRatio);
+	  max-height: 476px;
+	  width: 90vw;
+	  max-width: 526px;
+	  order: 0;
+	};
+  @media (max-width: $phone) {
+	  height: calc(90vw * $AspectRatio);
+	  max-height: 317px;
+	  width: 90vw;
+	  max-width: calc(317px / $AspectRatio);
+	};
+}
+
+.text {
+  margin: 0px;
+  font-family: Josefin Slab;
+  font-size: 30px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 14px;
+  @media (max-width: $phone) {
+	  font-size: 16px;
+	  margin-left: 10px;
+	  margin-right: 14px;
+	}
+}
+
+.smalltext {
+	@extend .text;
+  font-family: Josefin Slab;
+	font-size: 24px;
+}
+
+h3 {
+  font-family: 'Josefin Slab';
+  margin-bottom: 0.0rem;
+  color: blue;
+}
+
+.homecolumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

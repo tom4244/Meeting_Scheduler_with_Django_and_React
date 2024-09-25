@@ -1,0 +1,257 @@
+$ScalePic: '../../img/horiz-res-reference.png';
+$LogoImagePic: '../../img/scheduler-101-blue.png';
+$LogoImagePicPink: '../../img/scheduler-101-pink.png';
+$LogoImagePicTan: '../../img/scheduler-101-tan.png';
+
+$huge: 10000px;
+$desktop: 1280px;
+$tablet: 1024px;  //dark green
+$phablet: 767px;  //hot pink
+$phone: 360px;    //light blue
+$tiny: 330px;
+
+a {
+  color: white;
+  text-declaration: none;
+  cursor: pointer;
+  &:hover {
+    color: green;
+  };
+}
+
+//background-color: blanchedalmond;
+body {
+ background-color: aliceblue;
+}
+
+.centeredText {
+  font-size: 1.2rem;
+  font-family: 'Josefin Slab';
+  font-weight: regular;
+  color: blue;
+}
+
+.errorMsg {
+  margin-top: 0;
+  margin-bottom: 1.0rem;
+  padding: 0;
+  font-family: Quicksand;
+  font-size: 1.0rem;
+  color: red;
+  background-color: lemonchiffon;
+}
+
+.h3Login {
+	font-family: "Quicksand";
+	color: dodgerblue;
+	margin-bottom: 10px;
+	margin-top: 40px;
+}
+
+header {
+  display: flex;
+	flex-flow: row wrap;
+	flex: 0 auto;
+	justify-content: space-between;
+	background-color: LightSkyBlue;
+	@media (max-width: $desktop) {
+	  background-color: SandyBrown;
+	}
+	@media (max-width: $tablet) {
+	  justify-content: center;
+	  background-color: DarkSeaGreen;
+	} 
+	@media (max-width: $phablet) {
+	  background-color: HotPink;
+	  display: block;
+	  margin: 0 auto;
+	}
+	@media (max-width: $phone) {
+	  background-color: LightSkyBlue;
+	}
+}
+  
+.headerInput {
+  height: 1rem;
+  padding: 0.5em;
+  margin: 0.0em;
+  margin-bottom: 1.0rem;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  color: Black;
+  background: papayawhip;
+  border: 1px solid black;
+  border-radius: 4px;
+  &:hover {
+    color: Blue;
+    background: White;
+  }
+}
+
+.input500 {
+	@extend .headerInput;
+	width: 500px;
+}
+  
+.loginButton {
+	@extend .roundedButton;
+	flex: 1 100%;
+}
+
+.loginForm {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ background-color: blanchedalmond;
+ height: 100%;
+ width: 100%;
+ }
+
+.logoImgStyle {
+  background-image: url($LogoImagePic);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 68px;
+	width: 300px;
+	background-size: 300px;
+	cursor: pointer;
+	@media (max-width: $huge) {
+	  background-image: url($LogoImagePic);
+	}
+	@media (max-width: $desktop) {
+	  background-image: url($LogoImagePicTan);
+	}
+	@media (max-width: $tablet ) {
+	  display: flex;
+	  flex-direction: row;
+	  margin: 0;
+	  justify-content: flex-start;
+	  flex: 1 auto;
+	  background-image: url($LogoImagePic);
+	}
+	@media (max-width: $phablet ) {
+	  display: block;
+	  margin: 0 auto;
+	  background-image: url($LogoImagePicPink);
+	}
+	@media (max-width: $phone) {
+	  background-image: url($LogoImagePic);
+	}
+}
+
+.membership {
+  display: flex;
+  flex-row: row wrap;
+  flex: 0 auto;
+  justify-content: flex-end;
+}
+
+.roundedButton {
+  width: 8rem;
+  height: 3em;
+  margin: 0.0rem;
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  background-color: DodgerBlue;
+  border: 0px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+      background-color: white;
+      color: green;
+      border: 1px solid green; 
+    }
+  &:disabled { 
+     background-color: #90ff1e;
+     color: white;
+     border: 0px solid black; 
+  }
+}
+
+.signUpButton {
+	@extend .roundedButton;
+	flex: 1 100%;
+	margin-top: 1rem;
+}
+
+.signUpLink {
+	@extend a;
+  display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	font-family: 'Josefin Slab';
+	font-size: 22px;
+	font-weight: bold;
+	color: blue;
+	@media (max-width: $phablet) {
+	  flex: 0 auto;
+	} 
+	@media (max-width: $phone) {
+	  font-size: 12px;
+	} 
+}
+
+.logInLink {
+	@extend a;
+  display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	font-family: 'Josefin Slab';
+	font-size: 22px;
+	font-weight: bold;
+	color: blue;
+	@media (max-width: $phablet ) {
+	  flex: 0 auto;
+	} 
+}
+
+.logOutLink {
+	@extend a;
+  display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	font-family: 'Josefin Slab';
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: blue;
+	@media (max-width: $phablet ) {
+	  flex: 0 auto;
+	} 
+}
+
+.passwordInput {
+	@extend .headerInput;
+	width: 200px;
+	margin-bottom: 1.0rem;
+}
+
+.pleaseText {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+// This is an image that shows little pips 
+//   at the approximate boundaries for
+//   page width of different devices like
+//   smartphones vs tablets, etc
+.scalePicture {
+  background-image: url($ScalePic);
+	background-repeat: no-repeat;
+	height: 5px;
+	width: 1440px;
+}
+
+.usernameInput {
+	@extend .headerInput;
+	width: 200px;
+	margin-bottom: 1.0rem;
+}
+
+vSpace10px {
+  height: 10px;
+}
